@@ -4,17 +4,17 @@
 
 ---
 
-## 🧰 Project Overview
+## Project Overview
 
 This repository contains optimized Rubik’s Cube solvers (3×3 and 2×2) powered by a tailored **Heuristic-Driven IDA\*** algorithm. Rather than relying on hardcoded AI models or brute-force approaches, this solver uses deep domain knowledge, pruning strategies, and intelligent move ordering.
 
-- 🔁 **Search Algorithm:** Iterative Deepening A\* (IDA\*)
-- 🎯 **Heuristic:** Pattern Databases (PDB), cost-based depth
-- ⚙️ **Scalability:** Modular design for extension to 4×4 and beyond
+- **Search Algorithm:** Iterative Deepening A\* (IDA\*)
+- **Heuristic:** Pattern Databases (PDB), cost-based depth
+- **Scalability:** Modular design for extension to 4×4 and beyond
 
 ---
 
-## 🧠 Heuristic Design
+## Heuristic Design
 
 The heart of the solver is its **cross-state pattern database** heuristic:
 
@@ -25,7 +25,7 @@ The heart of the solver is its **cross-state pattern database** heuristic:
 
 ---
 
-## 🔍 How It Works
+## How It Works
 
 1. **Start State** → Encoded into a flattened cube representation
 2. **IDA\* Loop** → Iteratively increases depth while pruning using heuristic
@@ -34,7 +34,7 @@ The heart of the solver is its **cross-state pattern database** heuristic:
 
 ---
 
-## 🚀 Performance
+## Performance
 
 | Cube | Avg. Moves | Solve Time | Memory |
 |------|------------|------------|--------|
@@ -45,27 +45,19 @@ The heart of the solver is its **cross-state pattern database** heuristic:
 - No external ML libraries required
 ---
 
-## 🧮 Time & Space Complexity
+## Time & Space Complexity
 
 - **Time:** Exponential worst-case \( O(b^d) \), but greatly reduced via PDB pruning
 - **Space:** Linear in depth, with heuristic lookup kept <20 KB in memory
 
 ---
 
-## 🧱 Future Extensions
+## Future Extensions
 
 - 4×4 & 5×5 support using center/edge pairing heuristics
-- Visual GUI using PyGame / OpenGL
+- Visual GUI using PyGame
 - Web version with React + WASM
 
----
 
-## 🧩 Run Instructions
-
-# Run 3x3 Solver
-python src/solver_3x3.py
-
-# Run 2x2 Solver
-python src/solver_2x2.py
 
 
